@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>callback</title>
+    <script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="101471470" data-redirecturi="http://yuedu.bmsgzw.cn/user.html" charset="utf-8"></script> 
+
+    <script type="text/javascript" src='../jquery-1.12.4.js'></script>
+</head>
+<body>
+	收藏收藏收藏
+    <script type="text/javascript">
+        if(QC.Login.check()){
+            QC.Login.getMe(function(openId, accessToken){
+                var paras = {
+                    access_token: accessToken,
+                    oauth_consumer_key:'101471470',
+                    openid:openId
+                }
+                var cbLoginFun = function(oInfo, oOpts){
+                   if(oInfo.ret == 0 ){
+                    console.log(oInfo)
+                    alert('登陆成功')
+                   }
+                };
+                QC.Login({btnId:"qqLoginBtn"}, cbLoginFun)
+            })
+        }
+    </script>
+</body>
+</html>

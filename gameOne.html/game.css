@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+ul li{
+    list-style: none;
+}
+
+.mainContainer{
+    width: 400px;
+    margin: 100px auto;
+}
+.imgBox{
+    width: 400px;
+    overflow: hidden; 
+    transform:rotatez(25deg);
+}
+.imgBox:hover{
+   cursor:url(img/3.png),auto;
+}
+.imgBox ul{
+    width: 400px;
+    overflow: hidden;
+}
+.imgBox ul li{
+    width: 100px;
+    height: 100px;
+    float: left;
+    position: relative;
+}
+.imgBox ul li .mark{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #999999;
+    opacity: 0.3;
+}
+.imgBox ul li img{
+    width: 100%;
+    height: 100%;
+   
+}
+
+.menuContainer{
+    margin: 0 auto;
+    overflow: hidden;
+    width: 800px;
+}
+.menuImgBox{
+    overflow: hidden;
+}
+.menuImgBox li {
+    width:200px;
+    height: 100px;
+    float: left;
+}
+
+.menuImgBox  li img{
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+   
+}
+.mouseImg{
+    display: none;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
+.t100{
+    border-bottom: 1px solid red;
+    height: 1px;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.t{
+    width: 800px;
+    height: 400px;
+    display: block;
+    margin: 100px auto;
+}

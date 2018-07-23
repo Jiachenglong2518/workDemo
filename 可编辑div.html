@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.a{
+			width: 1000px;
+			height: 100px;
+			border: 1px solid gray;
+		}
+		.bgr{
+			color:red;
+			display: inline-block;
+			height: 20px !important;
+			border: none;
+		    font-size: 15px;
+		    text-indent:5px;
+		}
+		.b{
+			display: inline-block;
+			line-height: 20px;
+			height: 20px;
+		}
+	</style>
+</head>
+<body>
+
+	<div class='a' contentEditable="true"></div>
+	
+    <script src="../网上商城/js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+    	var str = 'asjdajskndjansjkanjk<input contentEditable="true" class="bgr"  value = "as年即使对方撒啊dasdasdas" ><span class="b">as年即使对方撒啊dasdasdas</span>'
+    	$('.a').html(str)
+    	console.log(str)
+    	 /*$('.bgr').bind('input propertychange', function() {
+                   var $this = $(this);
+                   console.log($this);
+                   var text_length = $this.val().length;//获取当前文本框的长度
+                   var current_width = parseInt(text_length) *16;//该16是改变前的宽度除以当前字符串的长度,算出每个字符的长度
+                   console.log(current_width)
+                   $this.css("width",current_width+"px");
+               });*/
+               $('.bgr').width( $('.b').width()-5)
+        $('.bgr').keyup(function(){
+        	var text = $(this).val();
+        	console.log(text)
+        	$('.b').html(text);
+        	var w = $('.b').width();
+        	console.log(w)
+        	$('.bgr').css('width',w-5)
+        })
+
+    </script>
+</body>
+</html>
