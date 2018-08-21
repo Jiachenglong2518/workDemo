@@ -1,0 +1,267 @@
+html,body{
+    height: 100%;
+}
+.mainContainer{
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.mainContainer img{
+    width: 100%;
+}
+.bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99;
+}
+.mainContainer .leftCloud{
+    position: absolute;
+    top: 3%;
+    width: 55%;
+    z-index: 98;
+    -webkit-animation:moveleftCloud 5s ease forwards;
+    -moz-animation:moveleftCloud 5s ease forwards;
+    animation:moveleftCloud 45s linear forwards;
+}
+@-webkit-keyframes moveleftCloud{
+    0%{left:10%}
+    100%{left: 26%;}
+}
+@-moz-keyframes moveleftCloud{
+    0%{left:10%}
+    100%{left: 26%;}
+}
+@keyframes moveleftCloud{
+    0%{left:10%}
+
+    1%{left:10%}
+    100%{left: 26%;}
+}
+.mainContainer .rightCloud{
+    width: 44%;
+    position: absolute;
+    top: 19%;
+    z-index: 98;
+    -webkit-animation:moveRightCloud 5s ease forwards;
+    -moz-animation:moveRightCloud 5s ease forwards;
+    animation:moveRightCloud 25s ease-out forwards;
+
+}
+@-webkit-keyframes moveRightCloud{
+    0%{
+        left:15%;
+    }
+    100%{
+        left: 54%;
+    }
+}
+@-moz-keyframes moveRightCloud{
+    0%{
+        left:15%;
+    }
+    100%{
+        left: 54%;
+    }
+}
+@keyframes moveRightCloud{
+    0%{
+        left:45%;
+    }
+    100%{
+        left: 54%;
+    }
+}
+.mainContainer .caiHong{
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index:97;
+    animation:showCai 4s ease forwards;
+}
+@keyframes showCai{
+    0%{
+       opacity: 0;
+    }
+    100%{
+       opacity: 1
+    }
+}
+.mainContainer .lizi{
+    position: absolute;
+    left: 0;
+    top: 0px;
+    animation:hideLizi 2s ease 1s forwards;
+    display: block;
+}
+@keyframes hideLizi{
+    0%{
+       opacity: 1;
+    }
+    100%{
+       opacity:0
+    }
+}
+.mainContainer .bigFont{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+}
+.mainContainer .zuo{
+    animation:showZuo 2s ease 0.5s forwards;
+}
+.mainContainer .zhe{
+    animation:showZhe 2s ease 1s forwards;
+}
+.mainContainer .jia{
+    animation:showJia 2s ease 2s forwards;
+}
+.mainContainer .yuan{
+    animation:showYuan 2s ease 3.5s forwards;
+}
+@keyframes showZuo{
+    0%{
+        opacity: 0;
+    }
+    5%{
+       top: 0px;
+    }
+    14%{
+        top:-2px;
+    }
+    23%{
+        top: 0px;
+    }
+    34%{
+        top:-2px;
+    }
+    45%{
+        top: 0px;
+    }
+    54%{
+      opacity: 1;
+      top: -2px;
+   }
+    100%{
+        opacity: 1;
+        top: 0px;
+    }
+}
+
+@keyframes showZhe{
+    0%{
+        opacity: 0;
+    }
+    8%{
+       top: 0px;
+    }
+    18%{
+        top:-2px;
+    }
+    25%{
+        top: 0px;
+    }
+    30%{
+        top:-2px;
+    }
+    38%{
+        top: 0px;
+    }
+    45%{
+       opacity: 1;
+       top: -2px;
+    }
+    100%{
+        opacity: 1;
+        top: 0px;
+    }
+}
+
+@keyframes showJia{
+    0%{
+        opacity: 0;
+    }
+    5%{
+       top: 0px;
+    }
+    12%{
+        top:-2px;
+    }
+    20%{
+        top: 0px;
+    }
+    28%{
+        top:-2px;
+    }
+    36%{
+        top: 0px;
+    }
+    42%{
+       opacity: 1;
+       top: -2px;
+    }  
+    100%{
+        opacity: 1;
+        top: 0px;
+    }
+}
+
+@keyframes showYuan{
+    0%{
+        opacity: 0;
+    }
+    5%{
+       top: 0px;
+    }
+    15%{
+        top:-2px;
+    }
+    24%{
+        top: 0px;
+    }
+    32%{
+        top:-2px;
+    }
+    39%{
+        top: 0px;
+    }
+    46%{
+       opacity: 1;
+       top: -2px;
+    }
+    100%{
+        opacity: 1;
+        top: 0px;
+    }
+}
+.rollContainer{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    margin-left: -400px;
+    z-index: 100;
+}
+.increaseNum{
+    display: inline-block;
+    width: 100px;
+    color: red;
+    font-size: 18px;
+    margin:0 auto;
+    text-align: center;
+}
+
+.rollBox{
+    width: 800px;
+    height: 15px;
+    border: 1px solid red;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+.roll{ 
+    background: red;
+    width: 0px;
+    height: 15px;
+    border-radius: 15px 0px 0px 15px;
+    transition: width 0.3s ease;
+}

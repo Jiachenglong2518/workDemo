@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+ul li{
+    list-style: none;
+}
+.container{
+    background: #d5d5d5;
+    padding-top: 77px;
+}
+.mainContainer{
+    width: 400px;
+    margin: 0 auto;
+}
+.increaseNum{
+    width: 100px;
+    color: red;
+    font-size: 18px;
+    margin:0 auto;
+    text-align: center;
+}
+.imgBox{
+    width: 400px;
+    overflow: hidden; 
+    /* transform:rotatez(25deg); */
+}
+.imgBox:hover{
+}
+.imgBox ul{
+    width: 400px;
+    overflow: hidden;
+}
+.imgBox ul li{
+    width: 100px;
+    height: 100px;
+    float: left;
+    position: relative;
+}
+.imgBox ul li .mark{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #999999;
+    opacity: 0.3;
+}
+.imgBox ul li img{
+    width: 100%;
+    height: 100%;
+   
+}
+
+.menuContainer{
+    margin: 0 auto;
+    overflow: hidden;
+    width: 800px;
+}
+.menuImgBox{
+    overflow: hidden;
+}
+.menuImgBox li {
+    width:200px;
+    height: 100px;
+    float: left;
+}
+
+.menuImgBox  li img{
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+   
+}
+.mouseImg{
+    display: none;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
+.t100{
+    border-bottom: 1px solid red;
+    height: 1px;
+    width: 100%;
+}
+.rollBox{
+    width: 800px;
+    height: 15px;
+    border: 1px solid yellow;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+.roll{ 
+    background: yellow;
+    width: 0px;
+    height: 15px;
+    border-radius: 15px 0px 0px 15px;
+    transition: width 0.3s ease;
+}

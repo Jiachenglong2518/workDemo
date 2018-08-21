@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>音乐播放器</title>
+    <link rel="stylesheet" type="text/css" href="play.css ">
+</head>
+<body>
+    <div class='playerConatiner'>
+        <div class='playerContent'>
+            <span class="fl playerImgBox">
+                <img src="images/2.jpg" alt="" ">
+            </span>
+        
+            <div class="doBox">
+                <span class='prev'></span>
+                <span class='playBtn'></span>
+                <span class='next'></span>    
+            </div>
+            <div class="textBox">
+                <p class='title'>第一章：初如江湖</p>
+                <p class='author'>
+                    <span class="name">主播：许志远</span>
+                    <span class='timeAll'>&nbsp;/&nbsp;00:00:00</span>
+                    <span class="timeNow">00:00:00</span>
+                    <div class='playRole'>
+                        <span>
+                            <em></em>
+                        </span>
+                    </div>
+                </p>
+            </div>
+            <div class='soundBox'>
+                <em class='soundIcon'></em>
+                <div class='soundRole'>
+                    <span class='hasSound'>
+                        <em class='soundPoint'></em>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <video id="audio"  hidden="true">
+        <!-- <source src="http://192.168.1.202/tset" /> -->
+        <source src="voice/1.mp3" type="">
+    </video>
+    <script type="text/javascript" src='../jquery-1.12.4.js'></script>
+    <script type="text/javascript" src='player.js'></script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+$(function(){
+   
+    var playerFn = {
+        palyflag:true, // 控制音乐播放暂停 , 只有在切歌时置为true代表重新播放
+        voiceIndex:0, // 播放歌曲的索引
+        source:$('#audio source'),//存放歌曲地址
+        causeTime:0, // 暂停时时间
+        isCaused: false, // 事否惊行了暂停播放 ，切歌时将其置为false
+        audio :document.getElementById("audio"), //播放器对象
+        timer:null, // 声音播放定时器
+
+        voiceArr:[{
+                src:"voice/1.mp3",
+                title:"悟空",
+                author:'戴荃'
+            },{
+                src:"voice/2.mp3",
+                title:"红色高跟鞋",
+                author:'陈一发'
+            },{
+                src:"voice/3.mp3",
+                title:"卜可勤",
+                author:'陈一发'
+            },{
+                src:"voice/4.mp3",
+                title:"离人愁",
+                author:'李袁杰'
+            },{
+                src:"voice/5.mp3",
+                title:"背对背拥抱",
+                author:'林俊杰'
+            }
+
+        ],
+        player:document.getElementById("audio"),//播放器对象
+        init:function(){
+            // 播放
+            $('.playBtn').click(function(){
+                playerFn.playVoice()
+            })
+            // 下一首
+            $('.next').click(function(){
+                playerFn.next()
+            })
+            // 上一首
+            $('.prev').click(function(){
+                playerFn.prev()
+            })
+            // 默认舒徐播放
+        },
+        // 播放
+        playVoice:function(){
+            var source = $('#audio source');
+            if(playerFn.palyflag && !playerFn.isCaused){   // 从新播放
+                console.log('播放')
+                playerFn.resizeTime() // 重置样式
+                source.attr('src',playerFn.voiceArr[playerFn.voiceIndex].src);
+                playerFn.audio.load(); // 重新加载video，如果不该变地址后将无法获取正确的video
+                playerFn.audio.play();
+                playerFn.playbackProgress(1);
+                playerFn.palyflag = false
+            } else if (!playerFn.palyflag && !playerFn.isCaused) { // 暂停
+                console.log('暂停')
+                playerFn.isCaused = true,
+                playerFn.palyflag = false
+                playerFn.causeTime = playerFn.audio.currentTime;
+                playerFn.playbackProgress(2);
+                playerFn.audio.pause();
+            } else if (!playerFn.palyflag && playerFn.isCaused) { // 暂停后的播放
+                console.log('暂停后的播放')
+                playerFn.palyflag = false
+                playerFn.isCaused = false,
+                playerFn.audio.play();
+                playerFn.playbackProgress(3);
+            }
+        },
+       
+        // 播放进度条以及时间行进
+        // 1 为正常播放以及切歌
+        // 2 为暂停
+        // 3为暂停后的播放
+        playbackProgress:function(type){
+            // 正常播放切歌
+            if(type == 3){ // 暂停后的播放
+                playerFn.audio.currentTime = playerFn.causeTime
+            } else if (type == 2) {  // 暂停
+                clearInterval(playerFn.timer)
+            }
+            playerFn.audio.oncanplay = function(){
+                var allTime = Math.ceil(playerFn.audio.duration);
+                var allTimeHMS = playerFn.getHMS(Math.ceil(playerFn.audio.duration));
+                $('.timeAll').html("&nbsp;/&nbsp;" + allTimeHMS);
+                playerFn.timer = setInterval(function(){
+                    var nowTime = Math.ceil(playerFn.audio.currentTime);
+                    var nowTimeHMS = playerFn.getHMS(Math.ceil(nowTime));
+                    var allWidth = $('.playRole').width()
+                    $('.timeNow').html(nowTimeHMS);
+                    var width = allWidth * nowTime/allTime ;
+                    console.log(allWidth,'allWidth')
+                    console.log(nowTime,'nowTime')
+                    console.log(allTime,'allTime')
+                    $('.playRole span').width(width)
+                },1000)
+            }    
+        },
+        // 获取时分秒
+        getHMS:function(s){
+            var t;
+            if(s > -1){
+                var hour = Math.floor(s/3600);
+                var min = Math.floor(s/60) % 60;
+                var sec = s % 60;
+                if(hour < 10) {
+                    t = '0'+ hour + ":";
+                } else {
+                    t = hour + ":";
+                }
+
+                if(min < 10){t += "0";}
+                t += min + ":";
+                if(sec < 10){t += "0";}
+                t += sec;
+            }
+            return t;
+        },
+        // 顺序播放
+        sequentialPlay:function(){
+            if( playerFn.audio.ended){
+                alert(1)
+            }
+        },
+        // 切换下一首
+        next:function(){
+            playerFn.voiceIndex++;
+            if(playerFn.voiceIndex>=playerFn.voiceArr.length){
+                playerFn.voiceIndex = 0;
+            }
+            playerFn.palyflag = true;
+            playerFn.isCaused = false;
+            playerFn.playVoice();
+        },
+        // 切换上一首
+        prev:function(){
+            playerFn.voiceIndex--;
+            if(playerFn.voiceIndex< 0){
+                playerFn.voiceIndex = playerFn.voiceArr.length-1;
+            }
+            playerFn.palyflag = false;
+            playerFn.isCaused = false;
+            playerFn.playVoice();
+        },
+        // 重置时间及进度条
+        resizeTime:function(){
+            clearInterval(playerFn.timer);
+            $('.playRole span').width(0);
+            console.log(playerFn.voiceArr[playerFn.voiceIndex].title)
+            console.log(playerFn.voiceArr[playerFn.voiceIndex].author)
+            $('.playerContent .title').html(playerFn.voiceArr[playerFn.voiceIndex].title);
+            $('.playerContent .name').html(playerFn.voiceArr[playerFn.voiceIndex].author);
+        }
+
+    }
+    playerFn.init();
+
+
+
+
+})

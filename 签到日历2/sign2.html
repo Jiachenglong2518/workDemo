@@ -2,47 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>签到</title>
+    <link rel="stylesheet" type="text/css" href="../reste.css">
+    <link rel="stylesheet" type="text/css" href="sign.css">
+    <script type="text/javascript" src='../jquery-1.12.4.js'></script>
+    <script type="text/javascript" src='../layer/layer.js'></script>
 </head>
-<body>
-    
-    <script type="text/javascript">
-        // 根据年月返回天数
-        function DayNumOfMonth(Year, Month) {
-            Month--;
-            var d = new Date(Year, Month, 1);
-            d.setDate(d.getDate() + 32 - d.getDate());
-            return (32 - d.getDate());
-        }
-
-        /*
-         *  根据年月返回对应月份天数
-         *  Data对象的月份从0开始和（即0代表一月份），我们传入想要的转化的月份
-         *  已2018/7月为例子，此时temp对象传入2018 7 0，
-         *  此时temp代表8月份，又因为日期从1~31，故8月0日，代表7月最后一天
-         *  因此得到七月的天数
-         *
-         */
-       
-        function getDaysInMonth(year,month){
-            month = parseInt(month，10);  //parseInt(number,type)这个函数后面如果不跟第2个参数来表示进制的话，默认是10进制。
-            var temp = new Date(year,month,0); // 此时，定义的Data 为
-            return temp.getDate();
-        }
-        getDaysInMonth(2018,6)
-       
-
-
-        /*
-         * 获取当前月份1号代表星期几
-         *  
-         *
-         *
-         */
-         function getWeekInDay(year,month){
-             var temp = new Data(year,month-1,1)
-             return (temp.getDay()+1) 
-         }
-    </script>
+<body id='signStyle'>
+    <span class='signSpan'>签到</span>
+    <script type="text/javascript" src="sign.js"></script>
 </body>
 </html>
