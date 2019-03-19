@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>音乐播放器</title>
+    <meta data-n-head="true" name="format-detection" content="telephone=no">
+    <meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="play.css ">
+    <!--<script src="//api.html5media.info/1.1.8/html5media.min.js"></script>-->
 </head>
 <body>
     <div class='playerConatiner'>
@@ -24,8 +27,8 @@
                     <span class='timeAll'>&nbsp;/&nbsp;00:00:00</span>
                     <span class="timeNow">00:00:00</span>
                     <div class='playRole'>
-                        <span>
-                            <em></em>
+                        <span class='playSpan'>
+                            <em class='playPoint'></em>
                         </span>
                     </div>
                 </p>
@@ -41,11 +44,13 @@
         </div>
 
     </div>
-    <video id="audio"  hidden="true">
+    <audio id="audio" hidden controls="controls" src="voice/1.mp3">
         <!-- <source src="http://192.168.1.202/tset" /> -->
-        <source src="voice/1.mp3" type="">
-    </video>
-    <script type="text/javascript" src='../jquery-1.12.4.js'></script>
+        您的浏览器不支持播放此音频
+        <!--<source src="voice/1.mp3" type="">-->
+
+    </audio>
+    <script type="text/javascript" src='jquery-1.12.4.js'></script>
     <script type="text/javascript" src='player.js'></script>
 </body>
 </html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>曲线图</title>
+    <meta data-n-head="true" name="format-detection" content="telephone=no">
+    <meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+<body>
+
+    <div id="container"></div>
+    <script type="text/javascript" src='../jquery-1.12.4.js'></script>
+    <script type="text/javascript" src="highcharts.js"></script>
+    <script type="text/javascript">
+   $(function () { 
+        var data_average = [ 92.5, 91.6, 90.6, 91.6, 91.6 ]; /* 每一天24小时数据，总共6个数据，分为4小时显示一个当时的情绪的平均数据 */
+ 
+        $('#container').highcharts({
+            chart: {
+                backgroundColor: {
+                    linearGradient: [0, 0, 500, 500],
+                    stops: [
+                        [0, '#56a3c4'],
+                        [1, '#6dc290']
+                    ]
+                },/* 改变整个图的背景颜色 */
+                type: 'spline'/* 制定图的类型 */
+            },
+ 
+            color: ['#333'],
+ 
+            title: {
+                text: '情绪' /* 标题上 */
+            },
+ 
+            subtitle: {
+                text: '' /* 标题下 */
+            },
+ 
+            xAxis: {
+                labels:{
+                    style:{
+                        color: '#000'/* 设置轴标签字体颜色 */
+                    }
+                },
+                categories: ['04:00', '08:00', '12:00', '16:00', '20:00','24:00']/* x轴标签 */
+            },
+            yAxis: {
+                title: {
+                    text: ''/* y轴说明 */
+                },
+                plotBands: [{ // Light air
+                    from: 70,
+                    to: 80,
+                    color: '#333',
+                    label: {
+                        text: '不正常',
+                        style: {
+                            color: '#fff'
+                        }
+                    }
+                }, { // Light breeze
+                    from: 80,
+                    to: 90,
+                    color: '#f60',
+                    label: {
+                        text: '正常',
+                        style: {
+                            color: '#fff'
+                        }
+                    }
+                }, { // Gentle breeze
+                    from: 90,
+                    to: 100,
+                    color: '#eee',
+                    label: {
+                        text: '不正常',
+                        style: {
+                            color: '#333'
+                        }
+                    }
+                }],
+                labels: {
+                    formatter: function () {
+                        return this.value + '';/*回调javascript函数来格式化标签，值通过this.value获得*/
+                    },
+                    style:{
+                        color: '#000'
+                    }
+                },
+                max: 100,
+                min: 70,
+                tickInterval: 5/* y轴间隔 */ 
+            },
+            tooltip: {
+                crosshairs: true,
+                shared: true
+            },
+            plotOptions: {
+                series: {/* 设定折线条颜色 */
+                    /*color: '#fff'*/
+                },
+                spline: {/*
+                    dataLabels: {// 每个点能显示y轴的数据 
+                        enabled: true
+                    },*/
+                    marker: {
+                        radius: 4,
+                        lineColor: '#333',
+                        lineWidth: 1 /* 曲线条的宽度 */
+                    },
+                }
+            },
+            series: [
+            {
+                name: '情绪',
+                marker: {
+                    symbol: 'diamond'
+                },
+                data: [{
+                    y: data_average[0],/* 初始值 */
+                }, data_average[1], data_average[2], data_average[3], data_average[4], data_average[5] ],/* x轴对应的y轴的每个数据 */
+                color: 'blue'
+            }]
+        });
+    });
+
+     
+    </script>
+</body>
+</html>

@@ -32,10 +32,10 @@
     function increaseNums (){
         var numTimer = setInterval(function(){
             var num = Math.random()*15;
-            increaseNum = increaseNum +  Math.round(num);
             if(increaseNum < 100){
                 $('.increaseNum').text(increaseNum+"%")
                 $('.roll').css('width',increaseNum+"%")
+                increaseNum = increaseNum +  Math.round(num);
             }
             if(increaseNum > 100 && imgReady){
                 increaseNum = 100;
@@ -43,8 +43,12 @@
                 setTimeout(function(){
                    $('.roll').css('border-radius','15px')
                 },300)
-                $('.increaseNum').text(increaseNum+"%")
-                $('.roll').css('width',increaseNum+"%")
+                $('.increaseNum').text(increaseNum+"%");
+                $('.roll').css('width',increaseNum+"%");
+                // setTimeout(function(){
+                //     $('.container').show()
+                //     $('.mainContainer').hide();
+                // },400)
             }
         },300)
     }

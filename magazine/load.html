@@ -1,0 +1,43 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=no,maximum-scale=1.0" id="viewport" name="viewport">
+    <link rel="stylesheet" type="text/css" href="./css_js/index.css">
+</head>
+<body style="position:relative">
+    <!--加载页-->
+    <div id="index_loading">
+        <div class="loading_box">
+            <div class="loading_img">
+                <img src="./image/01/ic_chahua2@2x.png" alt="" width="100%">
+            </div>
+            <div class="index_tip">
+                开卷有益,请耐心等待
+            </div>
+            <div class="progress">
+                <span></span>
+            </div>
+            <div class="loading_info"></div>
+        </div>
+        
+        <div class="loading_mask">
+            <img src="./image/03/ceshi.png" alt="" width="100%">
+            <a href="test.html" class="start-btn">
+                <span>开始测试</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="./css_js/jquery.js"></script>
+<script type="text/javascript" src="./css_js/preload.js"></script>
+<script type="text/javascript">
+document.querySelector('body').addEventListener('touchmove', function(e) {
+    e.preventDefault();
+})
+// $('.loading_mask').on('click',function(){
+//     window.location.href="test.html";
+// })
+</script>
+

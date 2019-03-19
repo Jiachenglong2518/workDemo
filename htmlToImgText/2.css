@@ -1,0 +1,234 @@
+body,html{
+      height: 100%;
+      width:100%;
+}
+.bodyFix{
+	position:fixed;
+}
+.container{
+    background: #1f305a;
+    position: absolute;
+    top:0px;
+    padding-bottom: 2.8rem;
+    width: 100%;
+}
+.topImg{
+    display: block;
+    margin: 0 auto;
+    width: 9.5rem;
+}
+.content{
+    margin-top:0.4rem;
+    padding-top: 0.3rem;
+    position: relative;
+    height: 14.5rem;
+    background: #1f305a;
+}
+.contentBg{
+    position: absolute;
+    top: 0rem;
+    left: 0.35rem;
+    width: 9.4rem;
+    height: 14.2rem;
+}
+.inbefore{
+    position: absolute;
+    top: 0.5rem;
+    left: 2.35rem;
+}
+.content .title{
+    display: block;
+    width: 3.5rem;
+    margin: 0 auto 0.2rem;
+}
+p{
+    text-align: center;
+    line-height: 0.5rem;
+}
+.content .score{
+    height: 3.75rem;
+    margin-left: 1.7rem;
+    margin-top:2.6rem;
+    position: relative;
+    width:80%
+}
+.content .score img{
+    width: 8rem;
+}
+.content .score .name{
+	padding:0 0.7rem;
+	width:3rem;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform:translateX(-50%);
+    top:0.2rem;
+    color: #ffffff;
+    font-size: 0.5rem;
+    background-size:100%;
+    height:1.3rem;
+    overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.content .score .num{
+    position: absolute;
+    top: 1.38rem;
+    left: 5.2rem;
+    font-size: 0.44rem;
+    color:#fff; 
+   
+}
+.content .score  .text{
+    font-size: 0.58rem;
+    color:#fff;
+    position: absolute;
+    top: 1.9rem;
+    left: 4.2rem;
+}
+.content .score .persent{
+    font-size: 0.44rem; 
+    color:#fff;
+    position: absolute;
+    top: 2.6rem;
+    left: 2.3rem;
+    display: inline-block;
+    width: 1.7rem;
+    text-align: center;
+}
+.content #chartContainer{
+    height: 5.75rem;
+    margin-left: 1.7rem;
+    margin-top: 0.3rem;
+    padding-bottom: 0.5rem;
+    position: absolute;
+    z-index: 999888;
+    width: 8rem;
+}
+.bgChartContainer{
+    width: 8rem;
+    height: 4rem;
+    position: absolute;
+    top: 7rem;
+    left: 1.7rem;
+}
+.content #chartContainer>div{
+    top: -1.2rem;
+}
+.content .erWeiMa{
+    width: 1.6rem;
+    height: 1.6rem;
+    position: absolute;
+    bottom: 1.3rem;
+    right: 0.56rem;
+    padding:1px;
+}
+.content .empty{
+    height: 2rem;
+}
+.container .doBottom{
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    transform: translate(-50%,0);
+    left: 50%;
+}
+.container .doBottom img{
+    display: inline-block;
+    width: 9rem;
+}
+.erWeiMa img{
+    width:110%;
+}
+.again{
+    display:inline-block;
+    width: 3.5rem;
+    height: 0.9rem;
+    position: absolute;
+    left: 0.5rem;
+    bottom: 0.9rem;
+}
+.yDiv{
+    position: absolute;
+    left: 2rem;
+    background: #fb6d7f;
+    z-index: 9999999;
+    top: 7.2rem;
+    padding-bottom: 0.4rem;
+    padding-top:0.2rem;
+    padding-top: 0.07rem;
+}
+.yDiv li {
+    margin-bottom:0.2rem;
+    width: 0.3rem;
+}
+.goAudio{
+	display: inline-block;
+    width: 4.5rem;
+    height: 1.9rem;
+    position: absolute;
+    left: 4.9rem;
+    bottom: 0.8rem
+}
+.lingBg{
+    background: #1f305a;
+    height: 0.5rem;
+    position: relative;
+    top: -0.5rem;
+}
+
+/* 查分页 */
+.gifBox{
+    position: absolute;
+    top: 6rem;
+    width: 2rem;
+    left: 3rem;
+    background: #fff;
+    text-align:center;
+}
+.gifBox img{
+	display:inline-block;
+	width:1rem;
+}
+.box{
+    height: 100%;
+ 	width: 100%;
+}
+.topImg{
+    position: relative;
+    top: 0.5rem;
+}
+.scoreImgBox{
+    width: 80%;
+    display: block;
+    margin: 0.5rem auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+}
+  .goScore{
+      display: block;
+      width: 50%;
+      position: absolute;
+      bottom: 1rem;
+      left: 50%;
+      transform:translate(-56%,0);
+  }
+.soScoreBox{
+    position: absolute;
+    top: 0px;
+    z-index:99999999999;
+    background: #1f305a;
+}
+
+.cearteImg{
+    width: 97%;
+}
+#btnSave{
+	position: absolute;	
+	bottom: -25px;
+	display: block;
+	text-align: center;
+	width: 100%;
+}

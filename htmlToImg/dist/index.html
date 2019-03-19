@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bg</title>
+    <meta data-n-head="true" name="format-detection" content="telephone=no">
+    <meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="1.css"/>
+    <style type="text/css">
+        .topImg{
+            background: url(../../imagesActive/2.png) no-repeat;
+            -webkit-background-size: 100%;
+            background-size: 100%;
+            width: 200px;
+            height: 1rem
+        }
+        .content{
+            background: url(../../imagesActive/1.png) 0.34rem 0rem no-repeat;
+            -webkit-background-size: 96% 96%;
+            background-size: 93% 96%;
+        }
+        .score{
+            width: 80%;
+            height: 3.75rem;
+            margin-left: 1.7rem;
+            margin-top:2.6rem;
+            background: url(../../imagesActive/4.png)  no-repeat;
+            -webkit-background-size: 100%;
+            background-size: 100%;
+            position: relative;
+        }
+        #chartContainer{
+            width: 80%;
+            height: 5.75rem;
+            margin-left: 1.7rem;
+            margin-top:0.4rem;
+            background: url(../../imagesActive/5.png)  no-repeat;
+            -webkit-background-size: 100% 65%;
+            background-size: 100% 65%;
+            position: relative;
+        }
+        .doBottom{
+            width: 9rem;
+            height: 2.6rem;
+            margin: 0 auto;
+            background: url(../../imagesActive/6.png)  no-repeat;
+            -webkit-background-size: 100%;
+            background-size: 100%;
+        }
+        .title{
+            height: 1.2rem;
+            width: 3.5rem;
+            margin: 0 auto 0.2rem;
+            background: url('../../imagesActive/3.png') no-repeat;
+            -webkit-background-size: 100%;
+            background-size: 100%;
+        }
+    </style>
+</head>
+  <body>
+    <body>
+        <div class='container' id='root'>
+            <div class="topImg"></div>
+            <!-- <img class='topImg' src="../../imagesActive/2.png"> -->
+            <div class="content">
+                <!-- <img class='contentBg' src="../../imagesActive/1.png" alt=""> -->
+                <div class='inbefore'>
+                    <div class='title'></div>
+                    <!-- <img class='title' src="../../imagesActive/3.png" alt="" class="title"> -->
+                    <p>2018年普通网络社会招生全国统一考试</p>
+                    <p>女子力综合能力测试（听力部分）</p>
+                </div>
+                
+                <div class='score'>
+                    <img src="../../imagesActive/4.png" alt="">
+                    <span class="name">李白</span>
+                    <span class="num">120分</span>
+                    <span class="text">世人皆知</span>
+                </div>
+                <div id="chartContainer"></div>
+                <img class='bgChartContainer' src="../../imagesActive/5.png" alt="">
+                <div class='erWeiMa'></div>
+                <div class='empty'></div>
+                            </div>
+                            <div class='doBottom'></div>
+        </div>
+
+        <span id='btnSave'>保存</span>
+    </body>
+    <script src="bundle.js"></script>
+  </body>
+</html>

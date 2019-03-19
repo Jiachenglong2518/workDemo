@@ -1,0 +1,102 @@
+/*全局样式*/
+@charset 'UTF-8';
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0} 
+body {
+    font-family:"microsoft yahei";
+    color: #333333;background: #fff;font-size: 14px;
+    -webkit-font-smoothing: antialiased;-moz-font-smoothing: antialiased;min-width: 1200px;}
+iframe{border:none;}
+h1,h2,h3,h4,h5,h6 {font-size: 14px;font-weight:normal;}
+li,ol,ul {list-style: none outside none}
+p {word-wrap: break-word;word-break: break-all}
+img {border: 0 none;-ms-interpolation-mode:bicubic;}
+a {text-decoration: none;color: #333333;outline: 0}
+label {cursor: pointer}
+strong,em{font-style: normal;font-weight:normal;}
+table {border-spacing: 0;border-collapse: collapse}
+input{border: none;}
+input::-moz-placeholder,textarea::-moz-placeholder {color: #ccc;}   /*设置placeholder默认颜色*/
+input:-ms-input-placeholder,textarea:-ms-input-placeholder {color: #ccc;}
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {color: #ccc;}
+textarea{resize:none;}
+input, select, textarea {font-family:inherit;font-size:inherit;font-weight:inherit;outline: none;}
+button,input[type="button"],input[type="reset"],input[type="submit"] {cursor:pointer;-webkit-appearance:button;-moz-appearance:button;} /*鎸夐挳鍒濆锟�?*/
+.none{display: none;}
+.fl{ float:left !important;}
+.fr{float: right !important;}
+.flex{display: -webkit-flex;display:flex;}
+.lineControl{overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp:3;-webkit-box-orient: vertical;}
+.posiRe{position: relative;}
+.overFlow{overflow: hidden;}
+.indent{text-indent:2em;}
+.font20{font-size:20px;text-align:center;line-height:80px;}
+/*清除浮动 */
+.clearfix:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+.clearfi x{zoom:1}
+.pointer{cursor: pointer}
+.topLable{
+    text-align: left;
+    width:30%;
+    padding:0px 0px  0px 10px;
+    display: inline-block;
+    height: 28px;
+    line-height: 28px;
+}
+.topInput{
+    width:60%;
+    padding: 0;
+    text-indent: 5px;
+    height: 28px;
+}
+.topTwoLable{
+    text-align: left;
+    width: 19%;
+    padding:0px 0px  0px 10px;
+    display: inline-block;
+    height: 28px;
+    line-height: 28px;
+}
+.timeInput{
+    padding: 0;
+    text-indent: 5px;
+    height: 28px;
+    width: 31%;
+    margin: 0;
+}
+.NumInput{
+    padding: 0;
+    text-indent: 5px;
+    height: 28px;
+    width:26%;
+    margin: 0;
+}
+.topTwoLableOneText{
+    width: 7%;
+    padding:0px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    display: inline-block;
+    float: none;
+    position: relative;
+    top: -1px;
+}
+.layui-row{
+    margin-top: 7px;
+}
+.layui-input{
+    display: inline-block;
+    height: 28px;
+    line-height: 28px;
+}
+.layui-input-block{
+    display: inline-block;
+    margin-left: 0;
+    padding: 0;
+}
+.layui-input-block{
+    width: 60%;
+}
+.tabDiv{
+    overflow-x: scroll;
+}

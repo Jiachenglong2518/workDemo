@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+       this.audioElement = document.querySelector('.audio');
+this.audioSource = this.audioCtx.createMediaElementSource(this.audioElement);
+this.audioSource.connect(this.analyser);
+this.audioSource.connect(this.gainNode);
+
+this.bindDrawEvent();
+        oscillator.start();
+    </script>
+</body>
+</html>

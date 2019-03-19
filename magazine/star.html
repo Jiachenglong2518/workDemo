@@ -1,0 +1,271 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=no,maximum-scale=1.0" id="viewport" name="viewport">
+    <link rel="stylesheet" type="text/css" href="./css_js/index.css">
+	<script type="text/javascript" src="./css_js/jquery.js"></script>
+	<script src="css_js/html2canvas.min.js"></script>
+</head>
+<style type="text/css">
+.star_sheep{
+	width:100%;
+    height:100%;
+    overflow: hidden;
+    background:url(./image/04/star1.png) no-repeat top center;
+    background-size:100% 100%;
+    position:relative;
+}
+.star_level{
+	font-family:PingFang-SC-Semibold;
+	font-size: 26px;
+	line-height: 40px;
+	color: #50E3C2;
+	letter-spacing: 2.03px;
+	position:absolute;
+	top:49%;
+	left:0;
+	right:0;
+	margin:auto;
+	text-align:center;
+}
+.star_word_box{
+
+}
+.star_sheep_word{
+	width:300px;
+	position:absolute;
+	top:60%;
+	left:0;
+	right:0;
+	margin:auto;
+	text-align:center;
+	overflow:hidden;
+	font-family: PingFangSC-Regular;
+	font-size: 12px;
+	color: #FFFFFF;
+	letter-spacing: 1.07px;
+	line-height: 18px;
+}
+.star_sheep_magazine{
+	position:absolute;
+	top:72%;
+	left:0;
+	right:0;
+	margin:auto;
+	text-align:center;
+	font-family: PingFang-SC-Medium;
+	font-size: 12px;
+	color: #50E3C2;
+	letter-spacing: 1.07px;
+	margin-top:10px;
+}
+.star_sheep_tip{
+	width:220px;
+	height:60px;
+}
+.star_sheep_code{
+	float:left;
+}
+.star_sheep_code img{
+	width:60px;
+	height:60px;
+	float:left;
+}
+.star_sheep_tip{
+	position:absolute;
+	top:78%;
+	left:0;
+	right:0;
+	margin:auto;
+	text-align:center;
+	z-index: 111;
+}
+.star_sheep_tip ul{
+	float:right;
+}
+.star_sheep_tip ul li{
+	font-family: PingFangSC-Regular;
+	font-size: 16px;
+	color: #50E3C2;
+	letter-spacing: 0.88px;
+	text-align:left;
+
+}
+.star_sheep_tip ul li img{
+	width:7px;
+	height:6px;
+}
+.star_sheep_tip ul li:first-child{
+	margin-bottom:6%;
+}
+.star_logo{
+	position:absolute;
+	top:90%;
+	left:0;
+	right:0;
+	margin:auto;
+	text-align:center;
+}
+.star_logo img{
+	width:116px;
+	height:37px;
+}
+.test{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    background-color: #87CEEB;
+    display: inline-block;
+    vertical-align:top;
+}
+/*canvas{*/
+    /*margin-right: 5px;*/
+/*}*/
+.down{
+    float: right;
+}
+.stars-box{
+	position: relative;
+	width: 110px;
+	margin: auto;
+	overflow: auto;
+	/*margin-top: -4px;*/
+}
+.star-example{
+	position: relative;
+	width: 16px;
+	height: 16px;
+	float: left;
+}
+.star-example img{
+	display: block;
+	width: 100%;
+}
+.star-example .two{
+	position: absolute;
+	width: 75%;
+	top: 6%;
+	left: 0;
+	right: 0;
+	margin: auto;
+
+}
+.margin-left5{
+	margin-left: 6px;
+}
+/*.star_wrap{*/
+	/*height: 100%;*/
+/*}*/
+.canvas-box{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.canvas-box img{
+	display: block;
+	width: 100%;
+}
+.functions{
+	display: none;
+}
+</style>
+<body>
+    <div class="star_wrap" id="star_wrap">
+        <div class="star_sheep">
+        	<div class="star_level">
+				<div>
+					<span>期刊大神</span>
+				</div>
+				<div class="stars-box">
+					<div class="star-example">
+						<img src="./image/03/ic_Star2@2x.png" alt="">
+						<img src="./image/03/ic_Star1@2x.png" alt="" class="two">
+					</div>
+					<div class="star-example margin-left5">
+						<img src="./image/03/ic_Star2@2x.png" alt="">
+						<img src="./image/03/ic_Star1@2x.png" alt="" class="two">
+					</div>
+					<div class="star-example margin-left5">
+						<img src="./image/03/ic_Star2@2x.png" alt="">
+						<img src="./image/03/ic_Star1@2x.png" alt="" class="two">
+					</div>
+					<div class="star-example margin-left5">
+						<img src="./image/03/ic_Star2@2x.png" alt="">
+						<!--<img src="./image/03/ic_Star1@2x.png" alt="" class="two">-->
+					</div>
+					<div class="star-example margin-left5">
+						<img src="./image/03/ic_Star2@2x.png" alt="">
+						<!--<img src="./image/03/ic_Star1@2x.png" alt="" class="two">-->
+					</div>
+				</div>
+        	</div>
+			<div class="star_sheep_word">
+				白羊座的你秉性执着、天不怕地不怕，为了实现目标会排除万难，很适合阅读数学类的期刊。哥德巴赫猜想让许多科学家穷尽一生来验证，执着的你在这条路上也许会发现不一样的风景。
+			</div>
+			<div class="star_sheep_magazine">气质期刊：《中学生数理化》</div>
+			<div class="star_sheep_tip">
+				<div class="star_sheep_code">
+					<img src="./image/03/ic_erweima@2x.png" alt="" >
+				</div>
+				<ul class="functions">
+					<li>
+						<a style="color: #50E3C2;" href="index.html">
+							再测一次
+							<img src="./image/03/ic_jinru@2x.png" alt="">
+						</a>
+
+					</li>
+					<li class="down" href="" download="downImg">
+						长按上方保存图片
+						<img src="./image/03/ic_jinru@2x.png" alt="">
+					</li>
+				</ul>
+			</div>
+			<div class="star_logo">
+		        <img src="./image/03/Logo2@2x.png" alt="">
+			</div>
+        </div>
+    </div>
+    <div class="canvas-box"></div>
+</body>
+<script>
+    // 生成Canvas
+    function creatCanvas(){
+        var w = $(".star_wrap").width();
+        var h = $(".star_wrap").height();
+        //要将 canvas 的宽高设置成容器宽高的 2 倍
+        var canvas = document.createElement("canvas");
+        canvas.width = w * 2;
+        canvas.height = h * 2;
+        canvas.style.width = w + "px";
+        canvas.style.height = h + "px";
+        var context = canvas.getContext("2d");
+        context.scale(2,2);
+        html2canvas($('.star_wrap'),{
+            canvas: canvas,
+            onrendered: function(canvas) {
+                convertCanvasToImage(canvas);
+            },
+        })
+    }
+    setTimeout(function () {
+        creatCanvas()
+    },500)
+    // 生成Img
+    function convertCanvasToImage (canvas) {
+        var image = new Image();
+        image.src = canvas.toDataURL("image/png");
+        $('.canvas-box').append(image);
+        $(".functions").show();
+        $(".star_sheep_code").hide()
+    }
+
+</script>
+</html>
+
+
+

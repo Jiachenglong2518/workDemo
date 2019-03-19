@@ -1,0 +1,271 @@
+/*å…¨å±€æ ·å¼*/
+@charset 'UTF-8';
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0} 
+body {
+    font-family:"microsoft yahei";
+    color: #333333;background: #fff;font-size: 14px;
+    -webkit-font-smoothing: antialiased;-moz-font-smoothing: antialiased;}
+iframe{border:none;}
+h1,h2,h3,h4,h5,h6 {font-size: 14px;font-weight:normal;}
+li,ol,ul {list-style: none outside none}
+p {word-wrap: break-word;word-break: break-all}
+img {border: 0 none;-ms-interpolation-mode:bicubic;}
+a {text-decoration: none;color: #333333;outline: 0}
+a, a:hover {text-decoration: none !important;}
+label {cursor: pointer}
+strong,em{font-style: normal;font-weight:normal;}
+table {border-spacing: 0;border-collapse: collapse}
+input{border: none;}
+input::-moz-placeholder,textarea::-moz-placeholder {color: #ccc;}   /*ä¿®æ”¹placeholderæ–‡å­—é¢œè‰²*/
+input:-ms-input-placeholder,textarea:-ms-input-placeholder {color: #ccc;}
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {color: #ccc;}
+textarea{resize:none;}
+input, select, textarea {font-family:inherit;font-size:inherit;font-weight:inherit;outline: none;}
+button,input[type="button"],input[type="reset"],input[type="submit"] {cursor:pointer;-webkit-appearance:button;-moz-appearance:button;} /*æŒ‰é’®åˆå§‹åŒ–*/
+html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background: url(images/bg.jpg);
+    height: 100%;
+    width: 100%;
+}
+.pageOneBg{
+    width:0%;
+    height: 0%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-55%);
+    transition: all ease 2s;
+}
+.circle{
+    width:0%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-60%);
+    transition: all ease 2s;
+}
+.textImg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-49%,-77%);
+    width: 0%;
+    animation:bigFont 2s ease  2s forwards;
+    -webkit-animation:bigFontAniamation 2s ease  2s forwards;
+}
+
+@keyframes bigFontAniamation
+{
+    0% {
+       width: 0%;
+       display: block;
+    }
+    90%{
+        width: 70%;
+       display: block;
+    }
+    100%{
+        width: 59%;
+       display: block;
+    }
+}
+@-webkit-keyframes bigFontAniamation 
+{
+    0% {
+       width: 0%;
+       display: block;
+    }
+    90%{
+        width: 62%;
+       display: block;
+    }
+    100%{
+        width: 59%;
+       display: block;
+    }
+}
+.logo{
+    position: absolute;
+    bottom: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+}
+
+.bgImg{
+    background: url('images/pageOneBg.jpg') center center;
+    -webkit-background-size: 178%;
+    background-size: 158%;
+    
+}
+.twoText{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 75%;
+}
+.twoText p{
+    color:#ffda35;
+    text-indent: 27px;
+    line-height: 24px;
+    font-size: 15px;
+    opacity: 0;
+    text-align: left;
+}
+.leftIn{
+    animation:leftInText 2s ease both;
+    -webkit-animation:leftInText 2s ease both;
+}
+@keyframes leftInText
+{
+    0% {
+       opacity: 0;
+       -webkit-transform:translateX(100px)
+    }
+   
+    100%{
+        opacity: 1;
+        -webkit-transform:translateX(0px)
+    }
+}
+-webkit-@keyframes leftInText
+{
+    0% {
+       opacity: 0;
+       -webkit-transform:translateX(100px)
+    }
+   
+    100%{
+        opacity: 1;
+        -webkit-transform:translateX(0px)
+    }
+}
+.rightIn{
+    animation:rightInText 2s ease both;
+    -webkit-animation:rightInText 2s ease both;
+}
+@keyframes rightInText
+{
+    0% {
+       opacity: 0;
+       -webkit-transform:translateX(-100px)
+    }
+   
+    100%{
+        opacity: 1;
+        -webkit-transform:translateX(0px)
+    }
+}
+-webkit-@keyframes rightInText
+{
+    0% {
+       opacity: 0;
+       -webkit-transform:translateX(-100px)
+    }
+   
+    100%{
+        opacity: 1;
+        -webkit-transform:translateX(0px)
+    }
+}
+.threePage img{
+    width:60%;
+}
+.threePage p{
+    text-align: center;
+    font-size: 15px;
+    color: #000;
+    /* width: 83%; */
+}
+.topP{
+    margin-bottom: 15px;
+    padding-top: 8%;
+}
+.bottomP{
+    text-indent: 20px;
+    padding: 0 14px;
+}
+.fp-slides{
+    height: 60% !important;
+}
+.fp-tableCell{
+    height: 100% !important;
+    text-align: center;
+
+}
+.fp-controlArrow{
+    display: none;
+}
+
+.fourPage p{
+    font-size: 20px;
+    color: #ffda35;
+    line-height: 43px;
+    opacity: 0;
+}
+
+.fourP0{
+     animation:topText 1.5s ease both;
+    -webkit-animation:topText 1.5s ease both;
+    opacity: 0;
+}
+.fourP1{
+     animation:topText 1.5s ease both;
+    -webkit-animation:topText 1.5s ease 0.7s both;
+    opacity: 0;
+}
+
+.fourP2{
+     animation:topText 1.5s ease both;
+    -webkit-animation:topText 1.5s ease 1.5s both;
+    opacity: 0;
+}
+
+.fourP3{
+     animation:topText 1.5s ease both;
+    -webkit-animation:topText 1.5s ease 2.2s both;
+    opacity: 0;
+}
+@keyframes topText
+{
+    0% {
+       opacity: 0;
+       -webkit-transform:translateY(-50px)
+    }
+   
+    100%{
+        opacity: 1;
+        -webkit-transform:translateX(0px)
+    }
+}
+-webkit-@keyframes topText
+{
+    0% {
+       opacity: 0;
+       -webkit-transform:translateY(-50px)
+    }
+   
+    100%{
+        opacity: 1;
+        -webkit-transform:translateY(0px)
+    }
+}
+.fivePage .pDiv{
+    opacity: 0;
+    margin-bottom: 20px;
+}
+.fivePage p{
+    font-size: 20px;
+    color: #ffda35;
+    line-height: 30px;
+}
+.sixPage p{
+    font-size: 25px;
+    color: #ffda35;
+    line-height: 43px;
+}

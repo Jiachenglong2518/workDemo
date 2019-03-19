@@ -265,3 +265,20 @@ html,body{
     border-radius: 15px 0px 0px 15px;
     transition: width 0.3s ease;
 }
+.container{
+    height: 100%;
+    /*overflow: hidden;*/
+    display: none;
+    position: relative;
+}
+.container img{
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 99;
+}
+.shad{
+    width: auto !important;
+    z-index: 9;
+}

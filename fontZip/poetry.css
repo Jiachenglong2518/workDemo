@@ -1,0 +1,154 @@
+@font-face {
+ font-family: 'FZS';
+ src: url('font/FZWBJ.OTF');
+}
+@font-face {
+ font-family: 'FZW';
+ src: url('font/FZWBJ.OTF');
+}
+@font-face {
+ font-family: 'FZX';
+ src: url('font/FZXKTK.TTF');
+}
+.a{
+    font-family: 'FZX'
+}  
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.oneContainer{
+    height: 100%;
+    width: 100%;
+    background: url(../../images/imagesActive/oneInBg.jpg) no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+.twoContainer{
+    height: 100%;
+    width: 100%;
+    background: url(../../images/imagesActive/twoInBg.jpg) no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+
+}
+.passBox{
+    width: 5.2rem;
+    height: 0.59rem;
+    margin: auto;
+    background:url(../../images/imagesActive/passBg.png) no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    position: fixed;
+    bottom: 3rem;
+    left: 50%;
+    transform: translate(-50%); 
+    text-align: center;
+}
+.passBox input{
+    display: inline-block;
+    border: none;
+    outline: medium;
+    height: 0.5rem;
+    width: 92%;
+    margin-top: 0.02rem;
+    text-align: center;
+}
+.inText{
+    text-align: center;
+    position: fixed;
+    bottom: 4rem;
+    width: 100%;
+}
+.mianContainer{
+    height: 100%;
+    background: url(../../images/imagesActive/oneContainerBg.jpg) no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    display: none;
+}
+.twoMainContainer{
+   background: url(../../images/imagesActive/twoContainerBg.jpg) no-repeat;
+    background-position-y: bottom;
+    background-size: 100%;
+}
+.pt14{
+    height: 80%;
+    padding-top: 1.4rem;
+}
+.mianContainer .poetryBg{
+    padding-top: 8%;
+    height: 80%;
+    padding-bottom: 5%;
+    background: url(../../images/imagesActive/poetryBg.png) no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    width: 85%;
+    margin: auto;
+}
+.mianContainer .poertyTittleBg{
+    width: 72%;
+    margin-top: 5%;
+    display: block;
+    margin: auto;
+}
+.mianContainer .titleInfo{
+    font-size: 0.4rem;
+    width: 100%;
+    margin-top: 0.8rem;
+}
+.mianContainer .titleInfo p{
+    text-align: center;
+    margin-top: 0.15rem;
+}
+.mianContainer .titleInfo p.name{
+    font-family: FZS;
+ }
+.mianContainer .titleInfo p.authorName{
+    font-family: FZW;
+ }
+.mianContainer .poetryBox{
+    height: 50%;
+    padding-bottom:0.2rem;
+}
+.mianContainer .poetry{
+    font-size: 0.4rem;
+    margin-top: 0.4rem;
+    border-top: 1px solid #9c9b9b;
+    border-bottom: 1px solid #9c9b9b;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    padding: 0.3rem 0;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    box-sizing: border-box;
+    padding-left: 0.3rem;
+    font-family: FZX;
+    height: 100%;
+    overflow: auto;
+}
+.mianContainer .poetry p{
+    margin-top: 0.3rem;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    text-indent: 0.6rem;
+    height:0.3rem;
+}
+.playBtn{
+    background: url(../../images/imagesActive/plyaBtn.png) no-repeat;
+    width: 1.57rem;
+    height: 1.57rem;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    margin: 0.5rem auto;
+}
+.readText{
+	font-weight:600;
+}

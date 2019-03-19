@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定时器</title>
+</head>
+<body>
+    <span class="cause">暂停</span>
+    <span class="play">开始</span>
+
+    <script type="text/javascript" src='jquery-1.12.4.js'></script>
+    <script type="text/javascript">
+        var i =0;
+        var timer = setInterval(function(){
+            i = i+1
+            console.log(i)
+        },1000)
+        $('.cause').click(function(event) {
+            clearInterval(timer)
+        });
+        $('.play').click(function(event) {
+            timer();
+        });
+    </script>
+</body>
+</html>

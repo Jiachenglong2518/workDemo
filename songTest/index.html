@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分享歌单</title>
+    <meta data-n-head="true" name="format-detection" content="telephone=no">
+    <meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="play.css ">
+    <!--<script src="//api.html5media.info/1.1.8/html5media.min.js"></script>-->
+</head>
+<body>
+    <div class='playerConatiner playerOpened'>
+        <span class='playerLock playerLockd'></span>    
+        <div class='playerContent'>
+            <span class="fl playerImgBox">
+                <img src="images/2.jpg" alt="">
+            </span>
+        
+            <div class="doBox">
+                <span class='prev'></span>
+                <span class='playerPlayBtn playThis'></span>
+                <span class='next'></span>    
+            </div>
+            <div class="textBox">
+                <p class='title'>白马时光有声</p>
+                <div class='author'>
+                    <span class="name">主播：白马时光</span>
+                    <span class='timeAll'>&nbsp;/&nbsp;00:00:00</span>
+                    <span class="timeNow">00:00:00</span>
+                    <div class='playRole'>
+                        <span class='playSpan'>
+                            <em class='playPoint'></em>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class='soundBox'>
+                <em class='soundIcon'></em>
+                <div class='soundRole'>
+                    <span class='hasSound'>
+                        <em class='soundPoint'></em>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <audio id="audio" hidden preload="true"  controls="controls" src=""></audio>
+    <script type="text/javascript" src='jquery-1.12.4.js'></script>
+    <script type="text/javascript" src='player.js'></script>
+</body>
+</html>
