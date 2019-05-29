@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>apply</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    function person(){
+        this.name = '小明';
+        this.age = '13';
+        console.log(this.name);
+
+        console.log(this.sex);
+    }
+    var Ming = {
+        'sex':'男'
+    }
+    person.apply(Ming);
+    console.log(Ming.name,'ming.name');
+    // 通过原型继承创建一个新对象
+    function inherit(p){
+        if(p === null){
+            throw TypeError();
+        } else if(Object.creatre){
+            return Object.creatre(p);
+        } else {
+            var t = typeof p;
+            if(t != 'object' && t != 'function'){
+                throw TypeError();
+            } else {
+                function f(){
+                    f.prototype = p;
+                    return new f;
+                }
+            }
+        }
+    }
+</script>
+</html>

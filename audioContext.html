@@ -3,15 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <style type="text/css">
+        .t1{
+            float: left;
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+        .t2{
+            background: yellow;
+            height: 150px;
+        }
+        .t21{
+            width: 110px;
+            height: 110px;
+            background: pink;
+        }
+    </style>
 </head>
 <body>
-    <script type="text/javascript">
-       this.audioElement = document.querySelector('.audio');
-this.audioSource = this.audioCtx.createMediaElementSource(this.audioElement);
-this.audioSource.connect(this.analyser);
-this.audioSource.connect(this.gainNode);
+    <div class="t1"></div>
+    <div class="t2">
+        <canvas class='t21'></canvas> >
+    </div>
 
-this.bindDrawEvent();
+    <script type="text/javascript">
+        this.audioElement = document.querySelector('.audio');
+        this.audioSource = this.audioCtx.createMediaElementSource(this.audioElement);
+        this.audioSource.connect(this.analyser);
+        this.audioSource.connect(this.gainNode);
+
+        this.bindDrawEvent();
         oscillator.start();
     </script>
 </body>

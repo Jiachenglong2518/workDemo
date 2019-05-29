@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>滑动</title>
+<meta data-n-head="true" name="format-detection" content="telephone=no">
+<meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="1.css">
+    <script src="http://code.jquery.com/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="1.js"></script>
+    <style type="text/css">
+        .slidetounlock{
+            font-size: 12px;
+            background:-webkit-gradient(linear,left top,right top,color-stop(0,#4d4d4d),color-stop(.4,#4d4d4d),color-stop(.5,#fff),color-stop(.6,#4d4d4d),color-stop(1,#4d4d4d));
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+            -webkit-animation:slidetounlock 3s infinite;
+            -webkit-text-size-adjust:none
+        }
+        @-webkit-keyframes slidetounlock{0%{background-position:-200px 0} 100%{background-position:200px 0}}
+
+    </style>
+</head>
+<body>
+<div id="wrapper" style="position: relative;top: 300px;">
+    <div id="drag">
+        <div class="drag_bg"></div>
+        <div class="drag_text slidetounlock" onselectstart="return false;" unselectable="on">
+            请按住滑块，拖动到最右边
+        </div>
+        <div class="handler handler_bg"></div>
+    </div>
+</div>
+
+    <!--<a href="#" class="img"><img src="img/Lighthouse.jpg"/></a>-->
+<script>
+    var callBackFn = function(res){
+        console.log('success')
+    }
+    var startFn = function(res){
+        console.log('start');
+        return false;
+    }
+    $('#drag').drag({
+        callBackFn:callBackFn,
+        startFn:startFn
+    });
+</script>
+</body>
+</html>
+

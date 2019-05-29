@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>点击复制</title>
+</head>
+<body>
+    <input id='copy' type="" name="">
+    <button id='btn'>点击复制</button>
+</body>
+<script type="text/javascript">
+    var btn = document.getElementById('btn');
+    btn.onclick = function(){
+        var dom = document.getElementById('copy');
+        dom.select();
+        document.execCommand('Copy');
+    }
+
+</script>
+</html>

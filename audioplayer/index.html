@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HTML5和jQuery轻量级音频播放器插件|创客云</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/audioplayer.css" />
+	<script>
+		/*
+			iOS浏览BUG修复
+			by @mathias, @cheeaun and @jdalton
+		*/
+		(function(doc){var addEvent='addEventListener',type='gesturestart',qsa='querySelectorAll',scales=[1,1],meta=qsa in doc?doc[qsa]('meta[name=viewport]'):[];function fix(){meta.content='width=device-width,minimum-scale='+scales[0]+',maximum-scale='+scales[1];doc.removeEventListener(type,fix,true);}if((meta=meta[meta.length-1])&&addEvent in doc){fix();scales=[.25,1.6];doc[addEvent](type,fix,true);}}(document));
+	</script>
+</head>
+<body>
+	<div class="htmleaf-container">
+		<header class="htmleaf-header">
+			<h1>HTML5和jQuery轻量级音频播放器插件 <span>A Light AudioPlayer with HTML5, jQuery and CSS3.</span></h1>
+			<div class="htmleaf-links">
+				<a class="htmleaf-icon icon-htmleaf-home-outline" href="https://www.22vd.com/" title="创客云" target="_blank"><span>创客云</span></a>
+				<a class="htmleaf-icon icon-htmleaf-arrow-forward-outline" href="https://www.22vd.com/33289.html" title="返回下载页" target="_blank"><span>返回下载页</span></a>
+			</div>
+		</header>
+		<div class="htmleaf-content bgcolor-3">
+			<div id="wrapper">
+				<audio src="https://dfs.bmsgzw.cn/dfs/group1/M00/00/C8/CgoKF1ussKqAB1JWAb7hoM2Gz1Y674.mp3" preload="auto" controls></audio>
+				
+
+			</div>
+		</div>
+	</div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/audioplayer.js"></script>
+<script>
+	$( function() { 
+		$( 'audio' ).audioPlayer({
+		    classPrefix: 'audioplayer',
+		    strPlay: 'Play',
+		    strPause: 'Pause',
+		    strVolume: 'Volume'
+		});
+	} );
+</script>
+</html>
