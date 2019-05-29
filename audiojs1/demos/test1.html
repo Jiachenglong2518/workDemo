@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta data-n-head="true" name="format-detection" content="telephone=no">
+    <meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Test 1 - audio.js</title>
+    <style>
+        p { clear: both; }
+    </style>
+    <!-- <link rel="stylesheet" type="text/css" href="1.css"> -->
+    <script type="text/javascript" src="../../jquery-1.12.4.js"></script>
+    <script src="../audiojs/audio.js"></script>
+    <script>
+        audiojs.events.ready(function() {
+            var as = audiojs.createAll({
+                trackEnded:function(){
+                    console.log('end')
+                }
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <h1>audiojs.createAll()</h1>
+    <p>Load from remote URL</p>
+    <audio preload="auto" id='player'>
+        <source class='source' src="https://dfs.bmsgzw.cn/dfs/group1/M00/02/26/CgoKF1xrqruAA9-9AS9FEZUpHcM047.mp3">
+    </audio>
+    <button class='next'>下一首</button>
+    
+
+
+
+    <p><a href="http://www.bensound.com/royalty-free-music/track/dubstep">Royalty Free Music from Bensound</a></p>
+
+
+</body>
+<script type="text/javascript">
+    $('.next').click(function(){
+        /*$('.source').attr('src','https://dfs.bmsgzw.cn/dfs/group1/M00/02/FB/CgoKFlyYPdOABt7jAbfmcH9SdtE271.mp3')
+         audiojs.events.ready(function() {
+            var as = audiojs.createAll();
+        });*/
+        var audio = document.getElementById('player');
+        $('.source').attr('src','https://dfs.bmsgzw.cn/dfs/group1/M00/02/FB/CgoKFlyYPdOABt7jAbfmcH9SdtE271.mp3')
+        audio.load();
+        audio.play();
+    })
+</script>
+
+</html>

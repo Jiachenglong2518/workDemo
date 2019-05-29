@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试jsonP</title>
+    <script type="text/javascript" src='../../jquery-1.12.4.js'></script>
+    <script type="text/javascript" src='../src/jquery.jsonp.js'></script>
+</head>
+<body>
+    <span class='getDate' style='font-size:30px;'>请求</span>
+    <script type="text/javascript">
+        
+        $.jsonp({  
+           url:'https://bmsgtest139m.bmsgzw.cn/shareM',  
+           callbackParameter:"callback",  
+           timeout:3000,  
+           dataFilter:function(json){  
+                console.log("jsonp.filter:"+json.name);  
+                json.name = "测试123435";  
+                return json;  
+            },  
+           success:function(json,textStatus,xOptions){  
+               console.log("jsonp.success:"+json.name);  
+           },  
+           error:function(xOptions,textStatus){  
+                console.log("jsonp.error:"+textStatus);  
+           }  
+        });  
+    </script>
+</body>
+</html>
