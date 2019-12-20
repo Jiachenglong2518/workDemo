@@ -1,0 +1,41 @@
+<p v-if="item.type == '1'">游戏大厅</p>
+                      <p v-if="item.type == '2'">赛事详情页立即竞猜入口（足球，篮球）<br/>/ h5资讯详情参与竞猜（足球，篮球）</p>
+                      <p v-if="item.type == '3'">足球赛事详情 -&#45;&#45; 直播（让球，大小，角球即时赔率）</p>
+                      <p v-if="item.type == '4'">足球赛事详情 -&#45;&#45; 赔率</p>
+                      <p v-if="item.type == '5'">篮球赛事详情 -&#45;&#45; 赔率</p>
+                      <p v-if="item.type == '6'">足球赛事详情页 -数据（盘赔/模型）</p>
+                      <p v-if="item.type == '7'">篮球赛事详情 -&#45;&#45; 直播（即时赔率）</p>
+                      <p v-if="item.type == '8'">足球直播标识-&#45;&#45;列表页，详情页（2个）</p>
+                      <p v-if="item.type == '9'">篮球直播标识-&#45;&#45;列表页，详情页（2个）</p>
+                      <p v-if="item.type == '10'">赛事详情页-&#45;&#45;推荐模块（足球）</p>
+                      <p v-if="item.type == '11'">赛事详情页-&#45;&#45;推荐模块（篮球）</p>
+                      <p v-if="item.type == '12'">比分模块-&#45;&#45;赛事列表页游戏标识 | 仅看竞猜/仅看爆料筛选</p>
+                      <p v-if="item.type == '13'">即嗨号 -&#45;&#45; 足/篮球tab下赛事卡片（快速投注广告位）</p>
+                      <p v-if="item.type == '14'">H5发现 -&#45;&#45; 赛事卡片（足球篮球快速投注）<span class="red">【270及以后 功能舍弃】</span></p>
+                      <p v-if="item.type == '15'">充值优惠</p>
+                      <p v-if="item.type == '16'">买券送钻石</p>
+                      <p v-if="item.type == '17'">嗨币明细<span class="red">【安卓240版本后 功能舍弃】</span></p>
+                      <p v-if="item.type == '18'">我的竞猜<span class="red">【安卓240版本后 功能舍弃】</span></p>
+                      <p v-if="item.type == '19'">我的打赏<span class="red">【安卓240版本后 功能舍弃】</span></p>
+                      <p v-if="item.type == '20'">付费记录</p>
+                      <p v-if="item.type == '21' && (item.device * 1 == 2 || item.device * 1 == 6)">普通支付(备注：只有ios端有此功能)</p>
+                      <p v-if="item.type == '22' && (item.device * 1 == 2 || item.device * 1 == 6)">升级提醒(备注：只有ios端有此功能)</p>
+                      <p v-if="item.type == '23' ">引导图</p>
+                      <p v-if="item.type == '24' ">H5发现-&#45;&#45;即嗨每日数据 <span class="red">【270及以后 功能舍弃】</span></p>
+                      <p v-if="item.type == '25' ">足球资料库-&#45;&#45;盘路（让球/大小）</p>
+                      <p v-if="item.type == '26' ">客户端赛事详情页游戏TAB</p>
+                      <p v-if="item.type == '27' ">游戏记录</p>
+                      <p v-if="item.type == '28' ">每日任务</p>
+                      <p v-if="item.type == '29' ">我的 -&#45;&#45; 邀请好友</p>
+                      <p v-if="item.type == '30' ">我的 -&#45;&#45; 申请即嗨号</p>
+                      <p v-if="item.type == '31' ">嗨吧/数据页云控</p>
+                      <p v-if="item.type == '32' ">即嗨号（新闻）/数据页</p>
+                      <p v-if="item.type == '33' ">VIP逻辑</p>
+                      <p v-if="item.type == '34' ">地域逻辑</p>
+                      <p v-if="item.type == '35' ">直播间云控</p>
+                      <p v-if="item.type == '36' ">即嗨号App自定义板块</p>
+                      <p v-if="item.type == '37' ">即嗨号板块轮播图</p>
+                      <p v-if="item.type == '38' ">开机弹窗</p>
+                      <p v-if="item.type == '39' ">比分列表页广告位</p>
+                      <p v-if="item.type == '40' ">足球赛事详情页-数据-基本面-SB赛前赔率/联赛盘路走势</p>
+                      <p v-if="item.type == '41' ">赛事详情页广告位</p>

@@ -1,0 +1,64 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>左右等高</title>
+	<style>
+		* { margin:0; padding:0; }
+
+		#wrap {
+
+		overflow:hidden;/*// (这行代码是重点，否则你会看到页面很长很长)*/
+
+		padding:0;
+
+		padding-left:180px;/*（内补丁）*/
+		transform: translateX(16px);
+
+		}
+
+		#left,#right {
+
+		height:auto;
+
+		margin-bottom:-10000px;/*（外补丁）*/
+
+		padding-bottom:10000px;/*（内补丁）*/
+
+		}
+
+		#left {
+
+		display:inline;
+
+		float:left;
+
+		width:180px;
+
+		margin-left:-180px;/*（外补丁）*/
+
+		background: red;
+
+		}
+
+		#right{
+		    float:right;
+		    width:100%;
+		    background: pink;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+    <div id="left">
+    	11111<br>111<br>11111<br>1111111<br><br>
+
+    </div>
+    <div id="right">
+    </div>
+</div>
+</body>
+</html>

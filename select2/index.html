@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>select2</title>
+
+    <script type="text/javascript" src='../jquery-1.12.4.js'></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+</head>
+<body>
+	<select class='selectMore' multiple='multiple'>
+		<option>1</option>
+		<option>2</option>
+		<option>3</option>
+		<option>4</option>
+		<option>5</option>
+		<option>1</option>
+		<option>14</option>
+		<option>115</option>
+		<option>23</option>
+		<option>14</option>
+		<option>35</option>
+	</select>	
+	<script type="text/javascript">
+		$('.selectMore').select2({
+            closeOnSelect: false,
+			width:'200',
+			placeholder:'asss'
+		})
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="https://code.highcharts.com.cn/highcharts/highcharts.js"></script>
+</head>
+<body>
+	<div id="container" style="width: 300px;height: 300px"></div>
+	<script type="text/javascript">
+		var highcharts = Highcharts.chart('container', {
+	"chart": {
+		"type":"areaspline",
+		"backgroundColor":"rgba(0,0,0,0)",
+		"alignTicks":false,
+		"gridLineWidth":0,
+		"reflow":true,
+		"height":60,
+		"margin":[0,-7,0,-8]
+	},
+	"exporting":{
+		"enabled":false
+	},
+	"tooltip":{
+		"enabled":false
+	},
+	"title":{
+		"text":"",
+		"floating":true
+	},
+	"xAxis":{
+		"visible":false
+	},
+	"yAxis":{
+		"visible":false
+	},
+	"credits":{
+		"enabled":false
+	},
+	"legend":{
+		"enabled":false
+	},
+	"series":[
+		{
+			"marker":{
+				"enabled":false,
+				"states":{
+					"hover":{
+						"enabled":false
+					},
+					"select":{
+						"enabled":false
+					}
+				}
+			},
+			"states":{
+				"hover":{
+					"enabled":false
+				},
+				"select":{
+					"enabled":false
+				}
+			},
+			"color":"#f26761",
+			"negativeColor":"#bdbdbd",
+			"fillOpacity":1,
+			"lineWidth":0,
+			"symbol":"none",
+			"data":[-10,-14,28,-50,-64,49,38,29,23,79,78,55,93,95,51,49,39,53,37,28,62,73,49,40,45,79,58,100,66,43,69,71,88,54,35,45,50,55,36,25,25,17,19,18,23,-26,-6,26,-14,-14,44,61,37,29,37,27,-14,16,47,92,70,78,53,52,26,58,50,30,19,17,12,23,53,41,35,52,70,75,53,100,88,54,41,49,26,48,65,81,84,69,47,21]
+		}
+	]
+});
+
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id='b'>
+        <label>input复选1组：</label>
+        <input type="checkbox" name="checkbox1" value="1" checked="checked"/>checkbox复选1
+        <input type="checkbox" name="checkbox1" value="2"/>checkbox复选2
+        <input type="checkbox" name="checkbox1" value="3" checked="checked"/>
+        <input type='submit' id = 'a'></input>
+    </form>
+    <script src='jquery-1.12.4.js'></script>
+    <script >
+        $('#b').submit(function(val){
+            var a = $('#+form表单ID').serializeArray();
+            console.log(a);
+            return false;
+        })
+    </script>
+</body>
+</html>
